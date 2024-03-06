@@ -15,7 +15,7 @@ export const Landingpage = () => {
             alt="kljj"
           />
         </div>
-        <div className="  flex flex-col items-center py-5 px-10   min-h-[100px] md:ml-5 lg:ml-10 ">
+        <div className="  flex flex-col items-center py-5 px-2   min-h-[100px] md:ml-5 lg:ml-10 ">
           <div>
             <h1 className="font-semibold text-[#000000bb] opacity-55 py-2">
               HELLO,I'M
@@ -24,19 +24,19 @@ export const Landingpage = () => {
           <div>
             <h1 className="font-bold text-3xl py-2">MOZAMMIL</h1>
           </div>
-          <div>
-            <h1 className="py-2 font-medium text-2xl">
+          <div className=" text-center tracking-tight  ">
+            <h1 className="py-2 font-medium text-1xl lg:text-2xl md:text-2xl">
               Full Stack Web developer
             </h1>
           </div>
-          <div className="flex gap-3 pt-3 pb-5">
-            <div>
-              <button className="border-2 px-3 py-3 rounded-full">
-                Download Cv
+          <div className="flex gap-1 text-sm pt-3 pb-5 lg:gap-3 ">
+            <div className="tracking-tight" >
+              <button className="border-2 px-4 py-2 lg:px-3 lg:py-3 md:px-3 md:py-3 rounded-full ">
+                Download CV
               </button>
             </div>
             <div>
-              <button className="border-2 px-8 py-3 rounded-full ">
+              <button className="border-2 px-4 py-2 lg:px-3 lg:py-3 md:px-3 md:py-3 rounded-full">
                 My Work
               </button>
             </div>
