@@ -36,13 +36,13 @@ const Navbar = () => {
       <div
         className={`absolute top-0 left-0 w-full h-full ${
           isopen && "hidden"
-        } bg-black/15 backdrop-blur-sm lg:hidden md:hidden  z-10`}
+        } bg-[#0000005c] backdrop-blur-sm lg:hidden md:hidden  z-10`}
       >
         <motion.div
           initial={{ x: 500 }}
           animate={!isopen ? { x: 0 } : { x: 200 }}
           transition={{ ease: [0.87, 0, 0.13, 1], duration: 0.5 }}
-          className="right-0 top-[10%]  absolute leading-10  text-2xl  list-none text-black gap-5 px-5 "
+          className="right-0 top-[10%] capitalize text-white absolute leading-10  text-2xl  list-none z-50 gap-5 px-5 "
         >
           {NavList.map((item, index) => (
             <li>
