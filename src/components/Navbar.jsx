@@ -4,7 +4,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 
 const Navbar = () => {
-  
   const [isopen, setisopen] = useState(true);
   let NavList = [
     {
@@ -20,16 +19,15 @@ const Navbar = () => {
       name: "contact",
     },
   ];
-  const animationstart = async () => {
-    
-  };
+  const animationstart = async () => {};
   return (
-    <nav className="px-10 py-5 flex justify-between items-center  lg:flex lg:justify-between lg:items-center">
+    <nav className="px-10 border-b-2 py-5 flex justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
       <div className="">
-        <h1 className="text-2xl font-semibold lg:text-3xl md:text-3xl">logo</h1>
+        <h1 className="text-2xl font-semibold  lg:text-3xl md:text-3xl font-[Anta]">
+          <a href="/">Moxl.dev</a>
+        </h1>
       </div>
       <motion.div
-        
         onClick={() => setisopen(!isopen)}
         className="block lg:hidden md:hidden text-2xl z-50"
       >
@@ -38,13 +36,13 @@ const Navbar = () => {
       <div
         className={`absolute top-0 left-0 w-full h-full ${
           isopen && "hidden"
-        } bg-black/15 lg:hidden md:hidden  z-10`}
+        } bg-black/15 backdrop-blur-sm lg:hidden md:hidden  z-10`}
       >
         <motion.div
           initial={{ x: 500 }}
-          animate={!isopen? { x: 0 } :({ x: 200 })}
-          transition={{ ease: [0.87, 0, 0.13, 1], duration: 1 }}
-          className="right-0 top-[10%] absolute leading-10 capitalize text-2xl  list-none text-black gap-5 px-5 "
+          animate={!isopen ? { x: 0 } : { x: 200 }}
+          transition={{ ease: [0.87, 0, 0.13, 1], duration: 0.5 }}
+          className="right-0 top-[10%]  absolute leading-10  text-2xl  list-none text-black gap-5 px-5 "
         >
           {NavList.map((item, index) => (
             <li>
@@ -56,7 +54,7 @@ const Navbar = () => {
         </motion.div>
       </div>
       <div
-        className={`list-none hidden  transition-all bg-green-400    md:flex `}
+        className={`list-none hidden capitalize transition-all  lg:gap-10 lg:text-3xl md:text-2xl md:font-medium md:gap-5 lg:font-medium  md:flex `}
       >
         {NavList.map((item, index) => (
           <li>
