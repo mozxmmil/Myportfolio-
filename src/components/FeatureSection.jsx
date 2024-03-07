@@ -38,12 +38,17 @@ const FeatureSection = () => {
   ];
   return (
     <div className="w-full h-screen bg-green-300 ">
-      <div className="w-full px-10 py-10 flex gap-10 flex-wrap  bg-yellow-300">
-        <div className="card w-[50rem] h-[50rem] bg-red-400 rounded-md"></div>
-        <div className="card w-[50rem] h-[50rem] bg-red-400 rounded-md"></div>
-        <div className="card w-[50rem] h-[50rem] bg-red-400 rounded-md"></div>
-        <div className="card w-[50rem] h-[50rem] bg-red-400 rounded-md"></div>
-        <div className="card w-[50rem] h-[50rem] bg-red-400 rounded-md"></div>
+      <div>
+        <h1></h1>
+      </div>
+      <div className="w-full px-10 py-10 flex gap-10 flex-wrap items-center justify-center bg-yellow-300">
+        <div className="card w-[15rem] h-[15rem] bg-red-400 rounded-md relative">
+          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Html</h1>
+        </div>
+        <div className="card w-[15rem] h-[15rem] bg-red-400 rounded-md"></div>
+        <div className="card w-[15rem] h-[15rem] bg-red-400 rounded-md"></div>
+        <div className="card w-[15rem] h-[15rem] bg-red-400 rounded-md"></div>
+        <div className="card w-[15rem] h-[15rem] bg-red-400 rounded-md"></div>
       </div>
     </div>
   );
