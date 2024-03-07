@@ -2,6 +2,8 @@ import React from "react";
 import iamge from "../../public/mainPic.jpg";
 import { FaGithub } from "react-icons/fa";
 import resume from '../../public/resume.pdf'
+import Typed from 'typed.js';
+import { FaAngleDown } from "react-icons/fa6";
 
 import { FaLinkedin } from "react-icons/fa";
 
@@ -17,9 +19,24 @@ export const Landingpage = () => {
     
     }
     
+    const use = React.useRef(null)
+  React.useEffect(() => {
+    
+    const typed = new Typed(use.current, {
+      strings: ["नमस्ते ,I'M",  "HELLO ,I'M ","ہیلو , I'M", "Hola ,I'M","こんにちは ,I'M"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop:true
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
   return (
-    <div className="w-full  lg:flex lg:items-center lg:justify-center   ">
-      <div className=" pt-20 pb-10 flex flex-col gap-5  items-center px-5  md:gap-4 lg:gap-1 justify-center w-full lg:flex lg:items-center lg:justify-center lg:px-10 lg:flex-row  md:flex-row">
+    <div className="">
+      <div className=" pt-20 pb-10 flex flex-col gap-5  items-center px-5  md:gap-4 lg:gap-20 justify-center w-full lg:flex lg:items-center lg:justify-center lg:px-10 lg:flex-row  md:flex-row">
         <div className="w-[40vw]  border-2 min-h-[40vw] lg:w-[30vw] lg:min-h-[30vw]  rounded-full ">
           <img
             className="w-full h-full rounded-full overflow-hidden bg-cover bg-center"
@@ -28,10 +45,11 @@ export const Landingpage = () => {
           />
         </div>
         <div className="  flex flex-col items-center py-5 px-2   min-h-[100px] md:ml-5 lg:ml-10 ">
-          <div>
-            <h1 className="font-semibold text-[#000000bb] opacity-55 py-2">
-              HELLO,I'M
-            </h1>
+          <div  className=" h-8 ">
+            
+            <span ref={use} className="name font-semibold text-lg  text-[#000000bb] opacity-55 py-2">
+              
+            </span>
           </div>
           <div>
             <h1 className="font-bold text-3xl py-2">MOZAMMIL</h1>
@@ -74,6 +92,11 @@ export const Landingpage = () => {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full  flex items-center justify-center lg:flex-col ">
+        <div className="px-5 py-5 border-2 rounded-full animate-bounce">
+          <FaAngleDown className="animate-bounce"/>
         </div>
       </div>
     </div>

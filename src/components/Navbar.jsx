@@ -19,12 +19,14 @@ const Navbar = () => {
       name: "contact",
     },
   ];
-  const animationstart = async () => {};
+
   return (
-    <nav className="px-10 border-b-2 py-5 flex justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
+    <nav className="px-10  bg-[#ffffff08] backdrop-blur-sm h py-5 flex fixed w-full justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
       <div className="">
         <h1 className="text-2xl font-semibold  lg:text-3xl md:text-3xl font-[Anta]">
-          <a href="/">Moxl.dev</a>
+          <a className="font-[BILLY ARGEL font Regular]" href="/">
+            Moxl.dev
+          </a>
         </h1>
       </div>
       <motion.div
@@ -34,9 +36,9 @@ const Navbar = () => {
         {isopen ? <AiOutlineMenu /> : <MdOutlineRestaurantMenu />}
       </motion.div>
       <div
-        className={`absolute top-0 left-0 w-full h-full ${
+        className={`absolute top-0 left-0 w-full h-screen ${
           isopen && "hidden"
-        } bg-[#0000005c] backdrop-blur-sm lg:hidden md:hidden  z-10`}
+        } bg-[#0000005c] backdrop-blur-sm lg:hidden md:hidden  z-20`}
       >
         <motion.div
           initial={{ x: 500 }}
