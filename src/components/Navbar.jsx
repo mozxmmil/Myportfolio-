@@ -21,7 +21,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="px-10  bg-[#ffffff08] z-[9999] backdrop-blur-sm h py-5 flex fixed w-full justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
+    <nav className="px-10 duration-1000 dark:bg-black dark:text-white bg-[#ffffff08] z-[9999] backdrop-blur-sm h py-5 flex fixed w-full justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
       <div className="">
         <h1 className="text-2xl font-semibold  lg:text-3xl md:text-3xl font-[Anta]">
           <a className="font-[BILLY ARGEL font Regular]" href="/">

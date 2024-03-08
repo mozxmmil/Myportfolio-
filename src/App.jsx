@@ -3,10 +3,27 @@ import Experience from "./Experience";
 import Home from "./Home";
 import Project from "./Project";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./Contex/Toggle";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [thememode, setthememode] = useState("light");
+  const darkTheme = () => {
+    setthememode("dark");
+  };
+  const lightTheme = () => {
+    setthememode("light");
+  };
+  useEffect(() => {
+    document.querySelector('html').classList.remove("dark","light")
+    document.querySelector('html').classList.add(thememode)
+  }, [thememode])
+  
+
   return (
-    <>
+    <ThemeProvider value={{ thememode, darkTheme, lightTheme }}>
+      <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -15,7 +32,7 @@ function App() {
           <Route path="/project" element={<Project />}></Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
 

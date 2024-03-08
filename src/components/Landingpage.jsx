@@ -6,6 +6,7 @@ import Typed from 'typed.js';
 import { FaAngleDown } from "react-icons/fa6";
 
 import { FaLinkedin } from "react-icons/fa";
+import { DarkMode } from "../utils/DarkMode";
 
 export const Landingpage = () => {
     const downloadPDF = ()=>{
@@ -37,6 +38,7 @@ export const Landingpage = () => {
   return (
     <div className="">
       <div className=" pt-20 pb-10 flex flex-col gap-5  items-center px-5  md:gap-4 lg:gap-20 justify-center w-full lg:flex lg:items-center lg:justify-center lg:px-10 lg:flex-row  md:flex-row">
+        <DarkMode />
         <div className="w-[40vw]  border-2 min-h-[40vw] lg:w-[30vw] lg:min-h-[30vw]  rounded-full ">
           <img
             className="w-full h-full rounded-full overflow-hidden bg-cover bg-center"
@@ -47,7 +49,7 @@ export const Landingpage = () => {
         <div className="  flex flex-col items-center py-5 px-2   min-h-[100px] md:ml-5 lg:ml-10 ">
           <div  className=" h-8 ">
             
-            <span ref={use} className="name font-semibold text-lg  text-[#000000bb] opacity-55 py-2">
+            <span ref={use} className="name font-semibold text-lg  text-[#000000bb] opacity-55 py-2 dark:text-white duration-1000">
               
             </span>
           </div>
