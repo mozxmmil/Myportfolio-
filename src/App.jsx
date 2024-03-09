@@ -7,19 +7,27 @@ import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./Contex/Toggle";
 import { useEffect, useState } from "react";
 
+
+
 function App() {
-  const [thememode, setthememode] = useState("light");
+  
+
+  const [thememode, setThememode] = useState(() => {
+    return localStorage.getItem("thememode") || "light";
+  });
+
   const darkTheme = () => {
-    setthememode("dark");
+    setThememode("dark");
+    localStorage.setItem("thememode", "dark");
   };
   const lightTheme = () => {
-    setthememode("light");
+    setThememode("light");
+    localStorage.setItem("thememode", "light");
   };
   useEffect(() => {
-    document.querySelector('html').classList.remove("dark","light")
-    document.querySelector('html').classList.add(thememode)
-  }, [thememode])
-  
+    document.querySelector("html").classList.remove("dark", "light");
+    document.querySelector("html").classList.add(thememode);
+  }, [thememode]);
 
   return (
     <ThemeProvider value={{ thememode, darkTheme, lightTheme }}>
