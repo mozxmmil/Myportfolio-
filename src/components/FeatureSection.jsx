@@ -47,7 +47,7 @@ const FeatureSection = () => {
   return (
     <div className="w-full  ">
       <div className="px-28">
-        <h1 className="text-3xl font-medium ">Experience</h1>
+        <h1 className="text-4xl font-bold  mt-10  ">Experience</h1>
       </div>
       <div className="w-full px-10 py-10  flex gap-10 flex-wrap items-center justify-center ">
         {cardInfo.map((item, index) => (
