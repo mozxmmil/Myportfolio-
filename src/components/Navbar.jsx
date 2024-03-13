@@ -13,7 +13,9 @@ const Navbar = () => {
       name: "contact",
     },
   ];
-
+ const getinfo = (i)=>{
+  
+ }
   return (
     <nav className="px-10 duration-300 dark:bg-black dark:text-white bg-[#ffffff08] z-[9999] backdrop-blur-sm h py-5 flex fixed w-full justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
       <div className="">
@@ -42,7 +44,7 @@ const Navbar = () => {
         >
           {NavList.map((item, index) => (
             <li>
-              <a key={index} href={`/${item.name}`}>
+              <a  key={index} href={`/${item.name}`}>
                 {item.name}
               </a>
             </li>

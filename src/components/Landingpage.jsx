@@ -41,6 +41,12 @@ export const Landingpage = () => {
       typed.destroy();
     };
   }, []);
+  const scrolldown = () => {
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="">
       <div className=" pt-20 pb-10 flex flex-col gap-5  items-center px-5  md:gap-4 lg:gap-20 justify-center w-full lg:flex lg:items-center lg:justify-center lg:px-10 lg:flex-row  md:flex-row">
@@ -86,7 +92,7 @@ export const Landingpage = () => {
               </button>
             </div>
             <div>
-              <button className="border-2 px-4 py-2 lg:px-3 lg:py-3 md:px-3 md:py-3 rounded-full">
+              <button onClick={scrolldown} className="border-2 px-4 py-2 lg:px-3 lg:py-3 md:px-3 md:py-3 rounded-full">
                 My Work
               </button>
             </div>
@@ -114,8 +120,8 @@ export const Landingpage = () => {
         </div>
       </div>
       <div className="w-full  flex items-center justify-center lg:flex-col ">
-        <div className="px-5 py-5 border-2 rounded-full animate-bounce">
-          <FaAngleDown className="animate-bounce" />
+        <div  className="px-5 py-5 border-2 rounded-full animate-bounce">
+          <FaAngleDown  className="animate-bounce" />
         </div>
       </div>
     </div>
