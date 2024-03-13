@@ -4,6 +4,7 @@ import { Landingpage } from './components/Landingpage'
 import FeatureSection from './components/FeatureSection'
 import LocomotiveScroll from 'locomotive-scroll';
 import ProjectSection from './components/ProjectSection';
+import Contactsection from './components/Contactsection';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <Landingpage/>
         <FeatureSection/>
         <ProjectSection/>
+        <Contactsection/>
 
     </div>
   )
