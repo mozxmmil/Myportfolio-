@@ -1,5 +1,6 @@
 import React from "react";
 import { SiNextdotjs } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const FeatureSection = () => {
   const cardInfo = [
@@ -45,31 +46,37 @@ const FeatureSection = () => {
     },
   ];
   return (
-    <div className="w-full  ">
+    <motion.div initial={{ opacity: 0, y: 100 }} // Initial state
+    animate={{ opacity: 1, y: 0 }} // Animation state
+    transition={{ duration: 1 }} className="w-full  ">
       <div className="px-28">
         <h1 className="text-4xl font-bold  mt-10  ">Experience</h1>
       </div>
       <div className="w-full px-10 py-10  flex gap-10 flex-wrap items-center justify-center ">
         {cardInfo.map((item, index) => (
+          <motion.div
+          whileHover={{ scale: 1.1 }}>
+
           <div
             key={index}
-            className={`card w-[15rem]  h-[15rem] border-[1px] border-none   bg-black bg-none text-white rounded-md relative shadow-lg  ${item.color}  `}
+            className={`card w-[15rem]  cursor-pointer h-[15rem] border-[1px] border-none   bg-black bg-none text-white rounded-md relative shadow-lg  ${item.color}  `}
             // style={{ borderColor: item.color }}
-          >
+            >
             <div className="absolute h-1/2 w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
               <img
                 className="w-full h-full object-cover   "
                 src={item.icon}
                 alt=""
-              />
+                />
             </div>
             <h1 className="absolute top-[85%] left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium text-xl ">
               {item.languge}
             </h1>
           </div>
+                </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

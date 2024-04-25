@@ -1,23 +1,21 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { MdOutlineRestaurantMenu } from "react-icons/md";
+
+import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
   const [isopen, setisopen] = useState(true);
-  let NavList = [
-    {
-      name: "project",
-    },
-    {
-      name: "contact",
-    },
-  ];
- const getinfo = (i)=>{
-  
- }
+  let NavList = [];
+
   return (
-    <nav className="px-10 duration-300 dark:bg-black dark:text-white bg-[#ffffff08] z-[9999] backdrop-blur-sm h py-5 flex fixed w-full justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15">
+    <motion.div
+      initial={{ opacity: 0, y: -150 }} // Initial state
+      animate={{ opacity: 1, y: 0 }} // Animation state
+      transition={{ duration: 1.3 }}
+      className="px-10 duration-300   dark:bg-black dark:text-white bg-[#ffffff08] z-[9999] backdrop-blur-sm h py-5 flex fixed w-full justify-between items-center  lg:flex lg:justify-between lg:items-center lg:px-20 lg:py-15"
+    >
+      
       <div className="">
         <h1 className="text-2xl font-semibold  lg:text-3xl md:text-3xl font-[Anta]">
           <a className="font-[BILLY ARGEL font Regular]" href="/">
@@ -29,7 +27,7 @@ const Navbar = () => {
         onClick={() => setisopen(!isopen)}
         className="block lg:hidden md:hidden text-2xl z-50"
       >
-        {isopen ? <AiOutlineMenu /> : <MdOutlineRestaurantMenu />}
+        {isopen ? <AiOutlineMenu /> : <CiMenuFries />}
       </motion.div>
       <div
         className={`absolute top-0 left-0 w-full h-screen ${
@@ -44,7 +42,7 @@ const Navbar = () => {
         >
           {NavList.map((item, index) => (
             <li>
-              <a  key={index} href={`/${item.name}`}>
+              <a key={index} href={`/${item.name}`}>
                 {item.name}
               </a>
             </li>
@@ -62,7 +60,7 @@ const Navbar = () => {
           </li>
         ))}
       </div>
-    </nav>
+    </motion.div>
   );
 };
 
