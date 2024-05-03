@@ -1,10 +1,9 @@
 import React from "react";
 import iamge from "../../public/mainPic.jpg";
 import { FaGithub } from "react-icons/fa";
-import resume from "../../public/resume.pdf";
+import resume from "../../public/MOZAMMIL_BACKEND_WEB.DEV. (1).pdf";
 import Typed from "typed.js";
 import { FaAngleDown } from "react-icons/fa6";
-
 import { FaLinkedin } from "react-icons/fa";
 import { DarkMode } from "../utils/DarkMode";
 import { easeInOut, motion } from "framer-motion";
@@ -51,7 +50,6 @@ export const Landingpage = () => {
       initial={{ opacity: 0, y: -100 }} // Initial state
       animate={{ opacity: 1, y: 0 }} // Animation state
       transition={{ duration: 1 }}
-      
     >
       <div className=" pt-20 pb-10 flex flex-col gap-5  items-center px-5  md:gap-4 lg:gap-20 justify-center w-full lg:flex lg:items-center lg:justify-center lg:px-10 lg:flex-row  md:flex-row">
         <DarkMode />
@@ -90,9 +88,9 @@ export const Landingpage = () => {
           </motion.div>
           <div className=" text-center tracking-tight overflow-y-hidden ">
             <motion.h1
-            initial={{y:300,opacity:0}}
-              animate={{ text: "pink" ,y:0 ,opacity:1}}
-              transition={{duration:1}}
+              initial={{ y: 300, opacity: 0 }}
+              animate={{ text: "pink", y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
               className="py-2 font-medium text-1xl lg:text-2xl md:text-2xl "
             >
               Full Stack Web developer
